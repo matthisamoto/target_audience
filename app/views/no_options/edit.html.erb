@@ -1,0 +1,9 @@
+<h1><%= link_to("Admin", "../../admin") %> > <%= link_to("No-Option List", {:action => 'list'}, :class => 'back-link') %> > Edit No-Option</h1>
+
+<%= form_for(:no_option, :url => { :action => 'update', :id => @no_option.id }) do |f| %>
+	
+	<p>Word: <%= f.text_field(:no_option) %></p>
+	
+	<%= submit_tag("Update No-Option")%>
+
+<% end %>

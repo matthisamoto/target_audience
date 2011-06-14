@@ -1,0 +1,35 @@
+<div id="content">
+
+	<h1>
+		<% @adjective.each do |adjective| %>
+		<%= adjective.adjective %>
+		<% end %>
+		<% @noun.each do |noun| %>
+		<%= noun.noun.downcase %>
+		<% end %>
+		<% @prep_phrase.each do |prep_phrase| %>
+		<%= prep_phrase.prep_phrase.downcase %>
+		<% end %>
+	</h1>
+	
+	<div id="no-button">
+		<a href="/audience"> 
+		<% @no_option.each do |no_option| %>
+		<%= no_option.no_option %>
+		<% end %>
+		</a>
+	</div>
+
+	<div id="yes-button">
+		<a href="#">Yes, that'll work. Gimme more info.</a>
+	</div>
+
+</div>
+
+<section id="footer">
+	
+	<div id="get-me-out">
+		<a href="#">Get me outta here!</a>
+	</div>
+	
+<section>

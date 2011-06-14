@@ -1,0 +1,12 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+db/sphinx/*
+public/system/*
+.sass-cache/*/*.scssc
+coverage/*
+spec/**/coverage/*
+.DS_Store
+config/*.sphinx.conf
+log/

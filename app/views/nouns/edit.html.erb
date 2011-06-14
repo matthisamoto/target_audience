@@ -1,0 +1,9 @@
+<h1><%= link_to("Admin", "../../admin") %> > <%= link_to("Noun List", {:action => 'list'}, :class => 'back-link') %> > Edit Noun</h1>
+
+<%= form_for(:noun, :url => { :action => 'update', :id => @noun.id }) do |f| %>
+	
+	<p>Word: <%= f.text_field(:noun) %></p>
+	
+	<%= submit_tag("Update Noun")%>
+
+<% end %>

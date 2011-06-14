@@ -1,0 +1,19 @@
+<h1>Demo#hello</h1>
+<p>Derp.</p>
+
+<p> ID: <%= @id %> </p>
+<p>Next Page : <%= @page + 1 %></p>
+<%= 1 + 1 %>
+
+<% target = "world"%>
+<%= "Hello #{target}"%>
+
+<%= link_to("My first link","/demo/index") %>
+ 
+<% @array.each do |n| %>
+<p><%= n %></p>
+<% end %>
+
+<hr />
+
+<%= params.inspect %>

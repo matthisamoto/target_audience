@@ -1,0 +1,23 @@
+<h1><%= link_to("Admin", "../admin") %> > Phrase List</h1>
+
+<p><%= link_to("Create New Phrase", {:action => 'new'}, :class => 'new-link') %></p>
+
+<% if !flash[:notice].blank? %>
+<div class="notice">
+	<%= flash[:notice] %>
+</div>
+<% end %>
+
+<table cellpadding="5" cellspacing="5">
+	
+<% @prep_phrases.each do |prep_phrase| %>
+	<tr>
+		<td><%= prep_phrase.id %></td>
+		<td><%= prep_phrase.prep_phrase %></td>
+		<td><%= link_to("Show", {:action => 'show', :id => prep_phrase.id}, :class => 'action show') %></td>
+		<td><%= link_to("Edit", {:action => 'edit', :id => prep_phrase.id}, :class => 'action edit') %></td>
+		<td><%= link_to("Delete", {:action => 'delete', :id => prep_phrase.id}, :class => 'action delete') %></td>
+	</tr>
+<% end %>
+
+</table>

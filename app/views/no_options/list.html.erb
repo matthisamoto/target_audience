@@ -1,0 +1,23 @@
+<h1><%= link_to("Admin", "../admin") %> > No-Option List</h1>
+
+<p><%= link_to("Create New No-Option", {:action => 'new'}, :class => 'new-link') %></p>
+
+<% if !flash[:notice].blank? %>
+<div class="notice">
+	<%= flash[:notice] %>
+</div>
+<% end %>
+
+<table cellpadding="5" cellspacing="5">
+	
+<% @no_options.each do |no_option| %>
+	<tr>
+		<td><%= no_option.id %></td>
+		<td><%= no_option.no_option %></td>
+		<td><%= link_to("Show", {:action => 'show', :id => no_option.id}, :class => 'action show') %></td>
+		<td><%= link_to("Edit", {:action => 'edit', :id => no_option.id}, :class => 'action edit') %></td>
+		<td><%= link_to("Delete", {:action => 'delete', :id => no_option.id}, :class => 'action delete') %></td>
+	</tr>
+<% end %>
+
+</table>

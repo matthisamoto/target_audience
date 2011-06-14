@@ -1,0 +1,9 @@
+<h1><%= link_to("Admin", "../../admin") %> > <%= link_to("Phrase List", {:action => 'list'}, :class => 'back-link') %> > Delete Phrase</h1>
+
+<%= form_for(:prep_phrase, :url => { :action => 'destroy', :id => @prep_phrase.id }) do |f| %>
+	
+	<p>Are you sure you want to delete the phrase "<%= @prep_phrase.prep_phrase %>"</p>
+	
+	<%= submit_tag("Delete Phrase")%>
+
+<% end %>

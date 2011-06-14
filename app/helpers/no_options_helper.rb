@@ -1,0 +1,2 @@
+module NoOptionsHelper
+end

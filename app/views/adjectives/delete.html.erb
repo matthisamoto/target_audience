@@ -1,0 +1,9 @@
+<h1><%= link_to("Admin", "../../admin") %> > <%= link_to("Adjective List", {:action => 'list'}, :class => 'back-link') %> > Delete Adjective</h1>
+
+<%= form_for(:adjective, :url => { :action => 'destroy', :id => @adjective.id }) do |f| %>
+	
+	<p>Are you sure you want to delete the adjective "<%= @adjective.adjective %>"</p>
+	
+	<%= submit_tag("Delete Adjective")%>
+
+<% end %>
