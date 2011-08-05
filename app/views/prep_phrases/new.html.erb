@@ -1,4 +1,4 @@
-<h1><%= link_to("Admin", "../../admin") %> > <%= link_to("Phrase List", {:action => 'list'}, :class => 'back-link') %> > New Phrase</h1>
+<h1><%= link_to("Admin", "#{root_path}admin") %> > <%= link_to("Phrase List", "#{root_path}admin/prep_phrases", :class => 'back-link') %> > New Phrase</h1>
 
 <%= form_for(:prep_phrase, :url => {:action => 'create'}) do |f| %>
 	

@@ -1,4 +1,4 @@
-<h1><%= link_to("Admin", "../../admin") %> > <%= link_to("Noun List", {:action => 'list'}, :class => 'back-link') %> > Edit Noun</h1>
+<h1><%= link_to("Admin", "#{root_path}admin") %> > <%= link_to("Noun List", "#{root_path}admin/nouns", :class => 'back-link') %> > Edit Noun</h1>
 
 <%= form_for(:noun, :url => { :action => 'update', :id => @noun.id }) do |f| %>
 	

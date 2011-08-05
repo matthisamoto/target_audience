@@ -1,12 +1,15 @@
 class NoOptionsController < ApplicationController
   
+  layout 'admin'
+  
   def index
-    list
-    render('list')
+    # list
+    # render('list')
+    redirect_to("#{root_path}admin/no_options")
   end
   
   def list
-    @no_options = NoOption.order("no_options.id ASC")
+    @no_options = NoOption.order("no_options.no_option ASC")
   end
   
   def show

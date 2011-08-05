@@ -1,12 +1,15 @@
 class AdjectivesController < ApplicationController
   
+  layout 'admin'
+  
   def index
-    list
-    render('list')
+    redirect_to("#{root_path}admin/adjectives")
+    # list
+    # render('list')
   end
   
   def list
-    @adjectives = Adjective.order("adjectives.id ASC")
+    @adjectives = Adjective.order("adjectives.adjective ASC")
   end
   
   def show

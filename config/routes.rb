@@ -2,6 +2,11 @@ TargetAudience::Application.routes.draw do
   
   root :to => "demo#index"
   
+  match 'admin/adjectives' => "adjectives#list"
+  match 'admin/nouns' => "nouns#list"
+  match 'admin/no_options' => "no_options#list"
+  match 'admin/prep_phrases' => "prep_phrases#list"
+  
   # match 'audience' => "demo#index"
   
   # The priority is based upon order of creation:
@@ -61,5 +66,6 @@ TargetAudience::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   
   match ':controller(/:action(/:id(.:format)))'
+  
   
 end

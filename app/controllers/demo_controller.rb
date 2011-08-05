@@ -1,11 +1,22 @@
 class DemoController < ApplicationController
   
   def index
+
+    Adjective.random.each do |adjective|
+      @adjective = adjective.adjective
+    end
     
-    @noun = Noun.random
-    @adjective = Adjective.random
-    @prep_phrase = PrepPhrase.random
-    @no_option = NoOption.random
+    Noun.random.each do |noun|
+      @noun = noun.noun.downcase
+    end
+    
+    PrepPhrase.random.each do |prep_phrase|
+      @prep_phrase = prep_phrase.prep_phrase.downcase
+    end 
+    
+    NoOption.random.each do |no_option|
+      @no_option = no_option.no_option
+    end
     
   end
   

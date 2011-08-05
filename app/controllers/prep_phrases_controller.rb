@@ -1,12 +1,15 @@
 class PrepPhrasesController < ApplicationController
   
+  layout 'admin'
+  
   def index
-     list
-     render('list')
+     # list
+     # render('list')
+     redirect_to("#{root_path}admin/prep_phrases")
    end
 
    def list
-     @prep_phrases = PrepPhrase.order("prep_phrases.id ASC")
+     @prep_phrases = PrepPhrase.order("prep_phrases.prep_phrase ASC")
    end
 
    def show

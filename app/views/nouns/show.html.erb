@@ -1,3 +1,3 @@
-<h1><%= link_to("Admin", "../../admin") %> > <%= link_to("Noun List", {:action => 'list'}, :class => 'back-link') %> > Noun</h1>
+<h1><%= link_to("Admin", "#{root_path}admin") %> > <%= link_to("Noun List", "#{root_path}admin/nouns", :class => 'back-link') %> > Noun</h1>
 
 <p><%= @noun.noun %></p>

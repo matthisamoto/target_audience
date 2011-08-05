@@ -1,12 +1,15 @@
 class NounsController < ApplicationController
   
+  layout 'admin'
+  
   def index
-    list
-    render('list')
+    # list
+    # render('list')
+    redirect_to("#{root_path}admin/nouns")
   end
   
   def list
-    @nouns = Noun.order("nouns.id ASC")
+    @nouns = Noun.order("nouns.noun ASC")
   end
   
   def show

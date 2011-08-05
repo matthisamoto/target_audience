@@ -1,35 +1,29 @@
 <div id="content">
-
-	<h1>
-		<% @adjective.each do |adjective| %>
-		<%= adjective.adjective %>
-		<% end %>
-		<% @noun.each do |noun| %>
-		<%= noun.noun.downcase %>
-		<% end %>
-		<% @prep_phrase.each do |prep_phrase| %>
-		<%= prep_phrase.prep_phrase.downcase %>
-		<% end %>
-	</h1>
 	
-	<div id="no-button">
-		<a href="/audience"> 
-		<% @no_option.each do |no_option| %>
-		<%= no_option.no_option %>
-		<% end %>
-		</a>
+	<div id="your-audience">
+	
+		<h1 class="headline">
+			<%= @adjective %>
+			<%= @noun %>
+			<%= @prep_phrase %>
+		</h1>
+	
 	</div>
+	
+	<div class="clear-both"></div>
+		
+	<div class="no button"><%= link_to @no_option, root_path %></div>
 
-	<div id="yes-button">
-		<a href="#">Yes, that'll work. Gimme more info.</a>
-	</div>
+	<div class="yes button"><%= link_to "Yes, that'll work. Gimme more info.","#" %></div>
 
 </div>
 
-<section id="footer">
+<div class="clear-both"></div>
 	
-	<div id="get-me-out">
-		<a href="#">Get me outta here!</a>
+<div id="footer">
+	
+	<div class="get-me-out">
+		<%= link_to "Get me outta here!","#" %>
 	</div>
 	
-<section>
+<div>

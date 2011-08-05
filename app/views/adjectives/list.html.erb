@@ -1,4 +1,4 @@
-<h1><%= link_to("Admin", "../admin") %> > Adjective List</h1>
+<h1><%= link_to("Admin", "#{root_path}admin") %> > Adjective List</h1>
 
 <p><%= link_to("Create New Adjective", {:action => 'new'}, :class => 'new-link') %></p>
 
@@ -14,7 +14,6 @@
 	<tr>
 		<td><%= adjective.id %></td>
 		<td><%= adjective.adjective %></td>
-		<td><%= link_to("Show", {:action => 'show', :id => adjective.id}, :class => 'action show') %></td>
 		<td><%= link_to("Edit", {:action => 'edit', :id => adjective.id}, :class => 'action edit') %></td>
 		<td><%= link_to("Delete", {:action => 'delete', :id => adjective.id}, :class => 'action delete') %></td>
 	</tr>

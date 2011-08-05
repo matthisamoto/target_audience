@@ -1,0 +1,82 @@
+// Place all the styles related to the demo controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$background_color: #EEEEEE;
+$text_color: #CC0000;
+$application_width: 700px;
+$link_bg_color: #000000;
+$link_tx_color: #FFFFFF;
+$serifs: "Times New Roman", Times, "Palatino", serif;
+$sans: Arial,Helvetics,sans-serif;
+
+html,body,div
+{
+	margin:0;
+	padding:0;
+}
+body
+{
+	background-color: $background_color;
+	color: $text_color;
+	text-align:center;
+	font-family:$sans;
+}
+a:link,a:visited,a:hover
+{
+	color:$link_tx_color;
+}
+#content
+{
+	margin:0 auto;
+	width:$application_width;
+	text-align:left;
+}
+#your-audience
+{
+	margin-top:50px;
+	height:150px;
+	font-family:$serifs;
+	letter-spacing:1px;
+}
+#footer
+{
+	position:absolute;
+	display:block;
+	text-align:center;
+	top:420px;
+	width:100%;
+}
+.get-me-out
+{
+	margin:0 auto;
+	width:$application_width;
+}
+.get-me-out a:link,.get-me-out a:visited,.get-me-out a:hover
+{
+	color:#000000;
+}
+.headline
+{
+	text-align:center;
+}
+.button
+{
+	max-width:100px;
+	background-color:$link_bg_color;
+	padding:15px;
+}
+.no
+{
+	float:left;
+	margin-left:100px;
+}
+.yes
+{
+	float:right;
+	margin-right:100px;
+}
+.clear-both
+{
+	clear:both;
+}
